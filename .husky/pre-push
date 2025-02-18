@@ -1,2 +1,2 @@
-npm test
-npm build
+npm run test
+npm run build
