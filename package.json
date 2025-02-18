@@ -12,7 +12,8 @@
     "prepare": "husky",
     "e2e": "ng e2e",
     "cypress:open": "cypress open",
-    "cypress:run": "cypress run"
+    "cypress:run": "cypress run",
+    "db-launch": "json-server --watch db.json"
   },
   "lint-staged": {
     "*.{js, jsx,ts,tsx}": [
@@ -32,12 +33,14 @@
     "@angular/platform-browser": "^19.0.0",
     "@angular/platform-browser-dynamic": "^19.0.0",
     "@angular/router": "^19.0.0",
+    "@jsverse/transloco": "^7.5.1",
     "@ngrx/effects": "^19.0.1",
     "@ngrx/entity": "^19.0.1",
     "@ngrx/router-store": "^19.0.1",
     "@ngrx/store": "^19.0.1",
     "@ngrx/store-devtools": "^19.0.1",
     "@tailwindcss/postcss": "^4.0.6",
+    "json-server": "^1.0.0-beta.3",
     "ng-zorro-antd": "^19.0.2",
     "postcss": "^8.5.2",
     "rxjs": "~7.8.0",
