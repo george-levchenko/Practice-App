@@ -14,6 +14,7 @@ module.exports = tseslint.config(
       ...angular.configs.tsRecommended,
       eslintPluginPrettierRecommended,
     ],
+    ignores: ['/dist/*', '/node_modules/*', '*.config.js', '*.config.ts'],
     processor: angular.processInlineTemplates,
     rules: {
       '@angular-eslint/directive-selector': [
@@ -40,4 +41,11 @@ module.exports = tseslint.config(
     extends: [...angular.configs.templateRecommended, ...angular.configs.templateAccessibility],
     rules: {},
   }
+  // {
+  //   plugins: ['@ngrx'],
+  //   extends: ['plugin:@ngrx/all'],
+  //   rules: {
+  //     '@ngrx/good-action-hygiene': 'error',
+  //   },
+  // }
 );

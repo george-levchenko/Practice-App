@@ -32,6 +32,11 @@
     "@angular/platform-browser": "^19.0.0",
     "@angular/platform-browser-dynamic": "^19.0.0",
     "@angular/router": "^19.0.0",
+    "@ngrx/effects": "^19.0.1",
+    "@ngrx/entity": "^19.0.1",
+    "@ngrx/router-store": "^19.0.1",
+    "@ngrx/store": "^19.0.1",
+    "@ngrx/store-devtools": "^19.0.1",
     "@tailwindcss/postcss": "^4.0.6",
     "ng-zorro-antd": "^19.0.2",
     "postcss": "^8.5.2",
@@ -45,8 +50,10 @@
     "@angular/cli": "^19.0.6",
     "@angular/compiler-cli": "^19.0.0",
     "@cypress/schematic": "^3.0.0",
+    "@ngrx/eslint-plugin": "^19.0.1",
     "@types/jasmine": "~5.1.0",
     "angular-eslint": "19.1.0",
+    "cypress": "latest",
     "eslint": "^9.20.0",
     "eslint-config-prettier": "^10.0.1",
     "eslint-plugin-prettier": "^5.2.3",
@@ -60,7 +67,6 @@
     "lint-staged": "^15.4.3",
     "prettier": "^3.5.1",
     "typescript": "~5.6.2",
-    "typescript-eslint": "8.23.0",
-    "cypress": "latest"
+    "typescript-eslint": "8.23.0"
   }
 }
