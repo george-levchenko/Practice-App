@@ -1,3 +1,2 @@
-ng test --watch=false
 npm run build
 
