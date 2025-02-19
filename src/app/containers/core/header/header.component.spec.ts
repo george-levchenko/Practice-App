@@ -8,6 +8,7 @@ import { ActivatedRoute } from '@angular/router';
 import { provideNzIcons } from 'ng-zorro-antd/icon';
 import { icons } from '../../../../assets/icons/ng-zorro-icons';
 import { provideAnimationsAsync } from '@angular/platform-browser/animations/async';
+import { NzSelectComponent } from 'ng-zorro-antd/select';
 
 describe('GHeaderComponent', () => {
   let component: GHeaderComponent;
@@ -15,7 +16,7 @@ describe('GHeaderComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      imports: [FormsModule],
+      imports: [FormsModule, NzSwitchComponent, NzSelectComponent],
       providers: [
         { provide: ActivatedRoute, useValue: {} }, // 🛠️ Mock ActivatedRoute
         provideNzIcons(icons),
