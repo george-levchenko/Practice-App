@@ -7,6 +7,7 @@ import { FormsModule } from '@angular/forms';
 import { ActivatedRoute } from '@angular/router';
 import { provideNzIcons } from 'ng-zorro-antd/icon';
 import { icons } from '../../../../assets/icons/ng-zorro-icons';
+import { provideAnimationsAsync } from '@angular/platform-browser/animations/async';
 
 describe('GHeaderComponent', () => {
   let component: GHeaderComponent;
@@ -18,6 +19,7 @@ describe('GHeaderComponent', () => {
       providers: [
         { provide: ActivatedRoute, useValue: {} }, // 🛠️ Mock ActivatedRoute
         provideNzIcons(icons),
+        provideAnimationsAsync(),
       ],
     }).compileComponents();
   });
