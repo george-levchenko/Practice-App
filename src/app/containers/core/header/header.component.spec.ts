@@ -47,10 +47,20 @@ describe('GHeaderComponent', () => {
 
   it('should toggle theme when switch is clicked', () => {
     const themeSwitch = fixture.debugElement.query(By.directive(NzSwitchComponent));
-    expect(component.whiteTheme).toBeFalse();
-    themeSwitch.triggerEventHandler('click', null);
+
+    expect(component.whiteTheme).toBeFalse(); // Initially false
+
+    // Simulate the click event
+    themeSwitch.nativeElement.click();
+    fixture.detectChanges(); // Force change detection
+
+    expect(component.whiteTheme).toBeTrue(); // Should now be true
+
+    // Click again to toggle back
+    themeSwitch.nativeElement.click();
     fixture.detectChanges();
-    expect(component.whiteTheme).toBeTrue();
+
+    expect(component.whiteTheme).toBeFalse(); // Should now be false again
   });
 
   it('should have navigation links with correct routerLinks', () => {
