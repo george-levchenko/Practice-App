@@ -1,11 +1,9 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 import { GHeaderComponent } from './header.component';
 import { By } from '@angular/platform-browser';
-import { NzAvatarComponent } from 'ng-zorro-antd/avatar';
-import { NzSelectComponent } from 'ng-zorro-antd/select';
 import { NzSwitchComponent } from 'ng-zorro-antd/switch';
+import { NzMenuItemComponent } from 'ng-zorro-antd/menu';
 import { FormsModule } from '@angular/forms';
-import { NzMenuDirective, NzMenuItemComponent } from 'ng-zorro-antd/menu';
 
 describe('GHeaderComponent', () => {
   let component: GHeaderComponent;
@@ -14,7 +12,6 @@ describe('GHeaderComponent', () => {
   beforeEach(async () => {
     await TestBed.configureTestingModule({
       imports: [FormsModule],
-      declarations: [GHeaderComponent, NzAvatarComponent, NzSelectComponent, NzSwitchComponent, NzMenuDirective, NzMenuItemComponent],
     }).compileComponents();
   });
 
