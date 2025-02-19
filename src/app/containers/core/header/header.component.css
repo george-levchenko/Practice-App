@@ -5,12 +5,9 @@
   cursor: pointer;
 }
 
-.user::ng-deep {
-
-  svg {
-    margin-bottom: 10px;
-    fill: black;
-  }
+.user ::ng-deep svg {
+  margin-bottom: 10px;
+  fill: black;
 }
 
 .notifications {
@@ -29,23 +26,20 @@
 
 .language {
   margin: 0 10px;
+}
 
-  nz-select {
-    width: 100px;
+.language nz-select {
+  width: 100px;
+}
 
-    &::ng-deep {
+.language nz-select ::ng-deep .ant-select-selection-item {
+  line-height: 30px !important;
+}
 
-      .ant-select-selection-item {
-        line-height: 30px !important;
-      }
+.language nz-select ::ng-deep .ant-select-selector {
+  height: 30px !important;
+}
 
-      .ant-select-selector {
-        height: 30px !important;
-
-        .ant-select-selection-search-input {
-          height: 30px !important;
-        }
-      }
-    }
-  }
+.language nz-select ::ng-deep .ant-select-selector .ant-select-selection-search-input {
+  height: 30px !important;
 }
