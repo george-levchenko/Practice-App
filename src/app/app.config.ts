@@ -14,6 +14,9 @@ import { provideRouterStore } from '@ngrx/router-store';
 import { provideStoreDevtools } from '@ngrx/store-devtools';
 import { TranslocoHttpLoader } from './transloco-loader';
 import { provideTransloco } from '@jsverse/transloco';
+import { NzModalService } from 'ng-zorro-antd/modal';
+import { provideNzIcons } from 'ng-zorro-antd/icon';
+import { icons } from '../assets/icons/ng-zorro-icons';
 
 registerLocaleData(en);
 
@@ -40,5 +43,7 @@ export const appConfig: ApplicationConfig = {
       },
       loader: TranslocoHttpLoader,
     }),
+    NzModalService,
+    provideNzIcons(icons),
   ],
 };

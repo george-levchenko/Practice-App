@@ -1,0 +1,51 @@
+.logo,
+.user {
+  margin: 0 10px;
+  background: white;
+  cursor: pointer;
+}
+
+.user::ng-deep {
+
+  svg {
+    margin-bottom: 10px;
+    fill: black;
+  }
+}
+
+.notifications {
+  margin: 0 10px;
+
+  [nz-icon] {
+    font-size: 25px;
+    color: white;
+    cursor: pointer;
+  }
+}
+
+.theme {
+  margin: 0 5px;
+}
+
+.language {
+  margin: 0 10px;
+
+  nz-select {
+    width: 100px;
+
+    &::ng-deep {
+
+      .ant-select-selection-item {
+        line-height: 30px !important;
+      }
+
+      .ant-select-selector {
+        height: 30px !important;
+
+        .ant-select-selection-search-input {
+          height: 30px !important;
+        }
+      }
+    }
+  }
+}

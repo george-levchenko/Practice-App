@@ -1,0 +1,22 @@
+.footer {
+  color: white;
+}
+
+.rights{
+  margin: 0 30px;
+}
+
+.links {
+  cursor: pointer;
+
+  a {
+    display: flex;
+    align-items: center;
+    color: white;
+  }
+
+  i {
+    margin: 0 20px;
+    font-size: 35px;
+  }
+}

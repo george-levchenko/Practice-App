@@ -1,0 +1,42 @@
+<div class="footer" nz-row nzJustify="center" nzAlign="middle">
+  <div class="links" nz-row nzAlign="middle">
+    <i
+      class="far fa-address-card"
+      routerLink="/welcome"
+      nz-tooltip="About Author"
+      (click)="showAuthorModal = true"
+      (keydown)="showAuthorModal = true"
+      role="button"
+      tabindex="0"></i>
+    <a href="https://www.linkedin.com/in/george-levchenko-77436a1b7/" target="_blank" nz-tooltip="LinkedIn">
+      <i class="fab fa-linkedin"></i>
+    </a>
+  </div>
+
+  <div class="rights" nz-row nzAlign="middle">©2025, No rights reserved.</div>
+
+  <div class="links" nz-row nzAlign="middle">
+    <a href="https://www.instagram.com/levchenko_george/" target="_blank" nz-tooltip="Instagram">
+      <i class="fab fa-instagram"></i>
+    </a>
+    <a href="https://www.facebook.com/levchenko.george/" target="_blank" nz-tooltip="Facebook">
+      <i class="fab fa-facebook-square"></i>
+    </a>
+  </div>
+</div>
+
+<nz-modal [(nzVisible)]="showAuthorModal" nzTitle="About Author" (nzOnCancel)="showAuthorModal = !showAuthorModal">
+  <ng-container *nzModalContent>
+    <div nz-row nzJustify="space-around">
+      <div nz-col>
+        <div>George Levchenko</div>
+        <div>+31 6 293 22 538</div>
+        <div>Rotterdam, Netherlands</div>
+      </div>
+      <div nz-col>
+        <div>Download CV</div>
+      </div>
+    </div>
+  </ng-container>
+  <ng-container *nzModalFooter> </ng-container>
+</nz-modal>

@@ -1,0 +1,60 @@
+<div nz-row nzJustify="space-between">
+  <div nz-col nz-row>
+    <nz-avatar
+      class="logo"
+      [nzSize]="60"
+      nzSrc="./icons/logo.svg"
+      nzAlt="logo"
+      routerLink="/welcome"
+      nz-tooltip="Home"
+      nzTooltipPlacement="bottom">
+    </nz-avatar>
+
+    <ul nz-menu nzTheme="dark" nzMode="horizontal">
+      <li nz-menu-item nzMatchRouter nzMatchRouterExact>
+        <a routerLink="/welcome">Home</a>
+      </li>
+      <li nz-menu-item nzMatchRouter nzMatchRouterExact>
+        <a routerLink="/movies">Movies</a>
+      </li>
+      <li nz-menu-item nzMatchRouter nzMatchRouterExact>
+        <a routerLink="/gallery">Empty</a>
+      </li>
+      <li nz-menu-item nzMatchRouter nzMatchRouterExact>
+        <a routerLink="/vata">404</a>
+      </li>
+    </ul>
+  </div>
+
+  <div nz-col nz-row nzAlign="middle">
+    <div class="language" nz-row nzAlign="middle" nz-tooltip="Language" nzTooltipPlacement="bottom">
+      <nz-select
+        nzSize="large"
+        [nzShowArrow]="false"
+        [nzCustomTemplate]="languageTemplate"
+        [(ngModel)]="language.value">
+        @for (language of languages; track language.value) {
+          <nz-option [nzLabel]="language.label" [nzValue]="language.value" nzCustomContent>
+            <i class="far fa-dot-circle"></i> {{ language.label }}
+          </nz-option>
+        }
+      </nz-select>
+      <ng-template #languageTemplate let-selected><i class="fas fa-check"></i> {{ selected.nzLabel }}</ng-template>
+    </div>
+
+    <div class="theme" nz-tooltip="Theme" nzTooltipPlacement="bottom">
+      <nz-switch
+        [(ngModel)]="whiteTheme"
+        [nzCheckedChildren]="checkedTemplate"
+        [nzUnCheckedChildren]="unCheckedTemplate"></nz-switch>
+      <ng-template #checkedTemplate><i class="fas fa-sun"></i></ng-template>
+      <ng-template #unCheckedTemplate><i class="fas fa-moon"></i></ng-template>
+    </div>
+
+    <div class="notifications" nz-tooltip="Notifications" nzTooltipPlacement="bottom">
+      <i nz-icon nzType="bell" nzTheme="fill"></i>
+    </div>
+
+    <nz-avatar class="user" nzSize="large" nzIcon="user" nz-tooltip="Profile" nzTooltipPlacement="bottom"> </nz-avatar>
+  </div>
+</div>
