@@ -4,7 +4,7 @@ import { By } from '@angular/platform-browser';
 import { NzSwitchComponent } from 'ng-zorro-antd/switch';
 import { NzMenuItemComponent } from 'ng-zorro-antd/menu';
 import { FormsModule } from '@angular/forms';
-import { RouterModule } from '@angular/router';
+import { ActivatedRoute } from '@angular/router';
 
 describe('GHeaderComponent', () => {
   let component: GHeaderComponent;
@@ -12,7 +12,10 @@ describe('GHeaderComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      imports: [FormsModule, RouterModule],
+      imports: [FormsModule],
+      providers: [
+        { provide: ActivatedRoute, useValue: {} }, // 🛠️ Mock ActivatedRoute
+      ],
     }).compileComponents();
   });
 
