@@ -5,6 +5,8 @@ import { NzSwitchComponent } from 'ng-zorro-antd/switch';
 import { NzMenuItemComponent } from 'ng-zorro-antd/menu';
 import { FormsModule } from '@angular/forms';
 import { ActivatedRoute } from '@angular/router';
+import { provideNzIcons } from 'ng-zorro-antd/icon';
+import { icons } from '../../../../assets/icons/ng-zorro-icons';
 
 describe('GHeaderComponent', () => {
   let component: GHeaderComponent;
@@ -15,6 +17,7 @@ describe('GHeaderComponent', () => {
       imports: [FormsModule],
       providers: [
         { provide: ActivatedRoute, useValue: {} }, // 🛠️ Mock ActivatedRoute
+        provideNzIcons(icons),
       ],
     }).compileComponents();
   });
