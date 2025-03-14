@@ -69,7 +69,7 @@ describe('GHeaderComponent', () => {
     expect(menuItems[0].nativeElement.textContent.trim()).toBe('Home');
     expect(menuItems[1].nativeElement.textContent.trim()).toBe('Movies');
     expect(menuItems[2].nativeElement.textContent.trim()).toBe('Empty');
-    expect(menuItems[3].nativeElement.textContent.trim()).toBe('store');
+    expect(menuItems[3].nativeElement.textContent.trim()).toBe('Store');
     expect(menuItems[4].nativeElement.textContent.trim()).toBe('404');
   });
 });
