@@ -1,0 +1,9 @@
+button {
+  margin: 20px;
+  display: block;
+}
+
+nz-card {
+  display: flex;
+  flex-direction: column;
+}

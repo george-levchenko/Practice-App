@@ -1,0 +1,15 @@
+<nz-card>
+  Counter: {{ counter() }} Computed-Counter: {{ computedCounter() }} Linked-Counter:
+  {{ linkedCounter() }} Times-Changed: {{ timesChanged() }}
+
+  <button nz-button nzType="primary" (click)="incrementCounter()">+++</button>
+  <button nz-button nzDanger (click)="decrementCounter()">---</button>
+  <button nz-button nzType="default" (click)="resetCounter()">---</button>
+
+  <g-child-signal-store [counterValue]="counter()" (counterValueChange)="incrementCounter()"></g-child-signal-store>
+  <g-child-signal-store [counterValue]="counter()" (counterValueChange)="incrementCounter()"></g-child-signal-store>
+  <g-child-signal-store [counterValue]="counter()" (counterValueChange)="incrementCounter()"></g-child-signal-store>
+
+  <label for="input-number">Set Counter</label>
+  <nz-input-number id="input-number" [(ngModel)]="counter"></nz-input-number>
+</nz-card>
