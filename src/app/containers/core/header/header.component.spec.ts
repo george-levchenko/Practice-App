@@ -65,10 +65,11 @@ describe('GHeaderComponent', () => {
 
   it('should have navigation links with correct routerLinks', () => {
     const menuItems = fixture.debugElement.queryAll(By.directive(NzMenuItemComponent));
-    expect(menuItems.length).toBe(4);
+    expect(menuItems.length).toBe(5);
     expect(menuItems[0].nativeElement.textContent.trim()).toBe('Home');
     expect(menuItems[1].nativeElement.textContent.trim()).toBe('Movies');
     expect(menuItems[2].nativeElement.textContent.trim()).toBe('Empty');
-    expect(menuItems[3].nativeElement.textContent.trim()).toBe('404');
+    expect(menuItems[3].nativeElement.textContent.trim()).toBe('store');
+    expect(menuItems[4].nativeElement.textContent.trim()).toBe('404');
   });
 });
